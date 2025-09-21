@@ -22,18 +22,17 @@ public class PasswordGenerator {
         Random rand = new Random();
         StringBuilder password = new StringBuilder();
 
-        // Обеспечиваем наличие хотя бы одного символа каждого типа
+
         password.append(UPPER.charAt(rand.nextInt(UPPER.length())));
         password.append(LOWER.charAt(rand.nextInt(LOWER.length())));
         password.append(DIGITS.charAt(rand.nextInt(DIGITS.length())));
         password.append(SYMBOLS.charAt(rand.nextInt(SYMBOLS.length())));
 
-        // Остальные символы — случайные
+
         for (int i = 4; i < length; i++) {
             password.append(allChars.charAt(rand.nextInt(allChars.length())));
         }
 
-        // Перемешиваем символы
         List<Character> chars = new ArrayList<>();
         for (char c : password.toString().toCharArray()) {
             chars.add(c);

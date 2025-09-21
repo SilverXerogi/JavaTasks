@@ -16,7 +16,7 @@ public class HangmanGame {
         System.out.println("Добро пожаловать в игру Виселица!");
 
         while (lives > 0) {
-            // Отображаем текущее слово
+
             StringBuilder display = new StringBuilder();
             boolean allGuessed = true;
             for (char c : word.toCharArray()) {
